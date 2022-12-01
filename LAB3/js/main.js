@@ -37,6 +37,6 @@
         $("#btn3").click(()=>{
             $(".in1:even").toggleClass("red");
         });
-        $("#div_form").load("./page/form.html");
+        $("#div_form").load("./pages/form.html");
     });//jQuery Handle
 
