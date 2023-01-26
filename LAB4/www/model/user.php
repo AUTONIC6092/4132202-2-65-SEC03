@@ -1,5 +1,5 @@
 <?php
-include "condb.php"
+include "condb.php";
 ?>
 <table>
     <thead>
@@ -14,18 +14,18 @@ include "condb.php"
     <tbody>
         <?php
         $sql = "SELECT * FROM tb_user ORDER BY user_id ASC";
-        $result = mysqli_query($link,$sql);
-        while($row = mysqli_fetch_assoc($result)){
+        $result = mysqli_query($link, $sql);
+        while ($row = mysqli_fetch_assoc($result)) {
         ?>
-        <tr>
-            <td><?=$row['user_id']?></td>
-            <td><?=$row['user_name']?></td>
-            <td><?=$row['user_pass']?></td>
-            <th><button data="<?=$row['user_id']?>">EDIT</button></th>
-            <th><button data="<?=$row['user_id']?>">DEL</button></th>
-        </tr>
-        <?php
-        }
-        ?>
+    <tr>
+        <td><?=$row ['user_id']?></td>
+        <td><?=$row ['user_name']?></td>
+        <tdr><?=$row ['user_pass']?></tdr>
+        <td><button data= "<?=$row ['user_id']?>">EDIT</button></td>
+        <td><button data= "<?=$row ['user_id']?>">DEL</button></td>
+    </tr>
+    <?php
+    }
+    ?>
     </tbody>
 </table>
